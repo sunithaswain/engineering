@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br></br>
+{{username}}<br>
+{{password}}
+<form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <input type="file" name="image">
+    <button type="submit" class="btn btn-success">Upload</button>
+  </form>
+
+  {% if image %}
+  	<img src="{{MEDIA_URL}}{{image}}" style="width:200px;height:200px;"><br/>
+  	
+  {% endif%}
+<div>
+    <p class='btn btn-success' id='homepage'>welcome_message</p>
+</div>
+{% endblock %}

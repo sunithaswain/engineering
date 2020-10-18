@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br></br>
+{% for dat in all %}
+  <p>{{ dat }}</p>
+{% endfor %}
+
+<form type="get" action="." style="margin: 0">
+    <input  id="search_box" type="text" name="search_box" class="form-control" placeholder="Search..." >
+    <button id="search_submit" type="submit" class="btn btn-primary" >Submit</button>
+</form>
+
+
+<p>Search result is : {{search_result}}</p>
+<!-- {{all}}<br></br> -->
+{% endblock %}
+

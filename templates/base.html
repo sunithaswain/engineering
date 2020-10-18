@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html>
+<head>
+<!-- <link rel="stylesheet" href="{{ STATIC_URL }}css/vimeo.css"> -->
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/navigation.css" type="text/css">
+<!-- <link rel="stylesheet" href="../../static/css/vimeo.css">  -->
+</head>
+<body>
+<!--main start-->
+<!-- <div id ="main" style="height:1100px;width:1000px;margin-left:150px;"> -->
+
+	<!-- <ul class="one-ul"> -->
+		<!-- {% if not request.user.is_anonymous%}		 -->
+		<!-- <li><a href="{% url 'profiling' %}">profile</a></li> -->
+		<!-- <li><a href="{% url 'logouting' %}">Logout</a></li> -->
+		<!-- <li><a href="{% url 'change_pwd' %}">Changepassword</a></li> -->
+		<!-- <br></br> -->
+		<!-- {% else %} -->
+		<!-- <li><a href="{% url 'registering' %}">Register</a></li> -->
+		<!-- <li><a href="{% url 'logging' %}">Login</a></li> -->
+		<!-- <br></br> -->
+		<!-- {% endif %} -->
+	<!-- </ul> -->
+	<!-- <div> -->
+{% block content %}
+{% endblock %}
+<!-- </div> -->
+	
+<!-- </div> -->
+</body>
+</html>

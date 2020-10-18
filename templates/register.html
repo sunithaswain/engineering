@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<form id='form' name='register' method='post' enctype='multipart/form-data' action="{% url 'registering' %}">
+	 {% csrf_token %}
+<ul>
+    <label>signin</label>
+    <input type="text"  name="signin" class="form-control"/><br>
+    <label>Password</label>
+    <input type="password"  name="password" class="form-control"/><br>
+    <label>Address</label>
+    <input type="text"  name="Address" class="form-control"/><br>
+    <label>Mobilenumber</label>
+    <input type="text"  name="Mobilenumber" class="form-control"/><br>
+<button type="submit" class="btn btn-primary" class="form-control">Click</button>
+<br>
+{%if message%}
+<p class="alert alert-primary" role="alert">{{message}}</p>
+{% endif %}
+</form>
+{% endblock %}
